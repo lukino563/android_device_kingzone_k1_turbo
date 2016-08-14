@@ -97,23 +97,26 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP
 #RECOVERY_VARIANT=twrp
+HAVE_SELINUX := true
+TARGET_USERIMAGES_USE_F2FS := true
 DEVICE_RESOLUTION := 1080x1920
 BOARD_HAS_LARGE_FILESYSTEM := true
-TW_NO_USB_STORAGE := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_NO_REBOOT_BOOTLOADER := true
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-TW_INTERNAL_STORAGE_PATH := "/emmc"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "emmc"
-TW_EXTERNAL_STORAGE_PATH := "/sdcard"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+TW_INTERNAL_STORAGE_PATH := "/sdcard"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun1/file"
+BOARD_UMS_FILE := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun1/file"
 
 BOARD_SEPOLICY_DIRS := \
        device/kingzone/k1_turbo/sepolicy
 
 # Use old sepolicy version
 POLICYVERS := 26
+
+ifeq ($(TARGET_DEVICE),k1_turbo)
+$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+endif
