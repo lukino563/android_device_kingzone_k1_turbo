@@ -117,6 +117,6 @@ BOARD_SEPOLICY_DIRS := \
 # Use old sepolicy version
 POLICYVERS := 26
 
-ifeq ($(TARGET_DEVICE),k1_turbo)
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
-endif
+
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
