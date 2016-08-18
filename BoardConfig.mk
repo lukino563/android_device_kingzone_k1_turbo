@@ -118,5 +118,3 @@ BOARD_SEPOLICY_DIRS := \
 POLICYVERS := 26
 
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
-
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
