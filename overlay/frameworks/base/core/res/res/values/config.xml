@@ -135,4 +135,12 @@
 
     <!-- IpReachability monitor enable/Disable -->
     <bool translatable="false" name="config_wifi_ipreachability_monitor">false</bool>
+
+    <!-- Doze mode -->
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+    <integer name="config_screenBrightnessDoze">5</integer>
+    <bool name="config_dozeAfterScreenOff">true</bool>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    <bool name="config_enableAutoPowerModes">true</bool>
+
 </resources>
