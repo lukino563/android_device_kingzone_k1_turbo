@@ -133,9 +133,10 @@ PRODUCT_PACKAGES += \
     libfmcust \
     libmtkplayer
 
-# Smart Cover
+# Device specific apps
 PRODUCT_PACKAGES += \
-    SmartCover
+    SmartCover \
+    Doze
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -144,10 +145,6 @@ PRODUCT_PACKAGES += \
 # CM Browser
 PRODUCT_PACKAGES += \
     Gello
-
-# Doze mode
-PRODUCT_PACKAGES += \
-    K1T-Doze
 
 $(call inherit-product, build/target/product/full.mk)
 
