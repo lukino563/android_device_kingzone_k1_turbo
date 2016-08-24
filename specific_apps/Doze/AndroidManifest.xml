@@ -10,10 +10,10 @@
 
     <uses-sdk
         android:minSdkVersion="21"
-        android:targetSdkVersion="21"/>
+        android:targetSdkVersion="23"/>
 
     <application
-        android:label="OneplusDoze"
+        android:label="K1 Turbo Doze"
         android:persistent="true">
 
         <receiver android:name="com.cyanogenmod.settings.doze.BootCompletedReceiver">
@@ -24,7 +24,7 @@
         </receiver>
 
         <service android:name="com.cyanogenmod.settings.doze.DozeService"
-                 android:permission="OneplusDozeService">
+                 android:permission="K1TDozeService">
         </service>
 
         <activity
