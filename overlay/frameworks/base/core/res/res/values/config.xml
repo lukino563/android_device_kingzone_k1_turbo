@@ -143,4 +143,7 @@
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
     <bool name="config_enableAutoPowerModes">true</bool>
 
+    <!-- Support in Surfaceflinger for blur layers.-->
+    <bool name="config_ui_blur_enabled">true</bool>
+
 </resources>
